@@ -1,0 +1,200 @@
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        /* Layout */
+        .main-content {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 240px;
+            background-color: black;
+            padding: 24px;
+        }
+        .main-view {
+            flex: 1;
+            background: linear-gradient(to bottom, #1f1f1f, black);
+            padding: 24px;
+            overflow: auto;
+        }
+        .player {
+            height: 90px;
+            background-color: #181818;
+            border-top: 1px solid #282828;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Sidebar styles */
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 8px;
+            margin-bottom: 16px;
+            color: #b3b3b3;
+            text-decoration: none;
+        }
+        .nav-item:hover {
+            color: white;
+        }
+        .playlists {
+            margin-top: 24px;
+            height: calc(100vh - 300px);
+            overflow-y: auto;
+        }
+        .playlist-item {
+            padding: 8px;
+            color: #b3b3b3;
+            text-decoration: none;
+            display: block;
+        }
+        .playlist-item:hover {
+            color: white;
+        }
+
+        /* Main view styles */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .user-avatar {
+            display: flex; /* Align items within the div */
+            align-items: center; /* Center the button vertically */
+            justify-content: center; /* Center the button horizontally */
+            margin: 10px; /* Optional: Add some margin */
+        }
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .quick-link-item {
+            height: 64px;
+            background-color: #181818;
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        .quick-link-item:hover {
+            background-color: #282828;
+        }
+        .made-for-you {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+        }
+        .mix-item {
+            background-color: #181818;
+            padding: 16px;
+            border-radius: 8px;
+        }
+        .mix-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background-color: #282828;
+            margin-bottom: 16px;
+        }
+
+        /* Player styles */
+        .now-playing {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .album-cover {
+            width: 56px;
+            height: 56px;
+            background-color: #282828;
+        }
+        .song-info h4 {
+            font-size: 14px;
+        }
+        .song-info p {
+            font-size: 12px;
+            color: #b3b3b3;
+        }
+        .player-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .control-buttons {
+            display: flex;
+            gap: 16px;
+        }
+        .progress-bar {
+            width: 400px;
+            height: 4px;
+            background-color: #535353;
+            border-radius: 2px;
+        }
+        .progress {
+            width: 33%;
+            height: 100%;
+            background-color: white;
+            border-radius: 2px;
+        }
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .volume-slider {
+            width: 100px;
+            height: 4px;
+            background-color: #535353;
+            border-radius: 2px;
+        }
+        .volume-level {
+            width: 66%;
+            height: 100%;
+            background-color: white;
+            border-radius: 2px;
+        }
+        .vibes{
+            color: springgreen;
+        }
+        .add-music-btn {
+            display: inline-block; /* Make the link behave like a button */
+            padding: 10px 20px; /* Add padding for a better look */
+            background-color: #079e58; /* Bootstrap primary color or any color you like */
+            color: white; /* Button text color */
+            font-weight: bold; /* Make the text bold */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+        
+        .add-music-btn:hover {
+            background-color: #014928; /* Darker shade for hover effect */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
